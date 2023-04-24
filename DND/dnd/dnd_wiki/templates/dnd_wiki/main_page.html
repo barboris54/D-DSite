@@ -1,10 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'dnd_wiki/base.html' %}
+{% block content %}
 <h1>Главная страница</h1>
-</body>
-</html>
+<div class="center">
+    <div class="row">
+
+        <section class="block block-100 block-page_title">
+            <h1 class="center-page_title">
+                <a href="/class/">Классы D&amp;D&nbsp;5</a></h1>
+        </section>
+
+
+        <section class="block block_100">
+
+
+            <div id="classes">
+                <div class="articles-tiles">
+                    <div class="grid-5_lg-4_sm-3_xs-1 tiles tiles-of">
+                        <div class="col tile"><a href="/class/88-bard/" class="tile-wrapper class class_bard"><span
+                                class="article_title">Бард</span><span class="article_title_en">Bard</span><span
+                                class="article_source" title="Player's handbook">PH</span></a></div>
+                        <div class="col tile"><a href="/class/87-barbarian/" class="tile-wrapper class class_barbarian"><span
+                                class="article_title">Варвар</span><span class="article_title_en">Barbarian</span><span
+                                class="article_source" title="Player's handbook">PH</span></a></div>
+                        <div class="col tile"><a href="/class/91-fighter/"
+                                                 class="tile-wrapper class class_fighter"><span class="article_title">Воин</span><span
+                                class="article_title_en">Fighter</span><span class="article_source"
+                                                                             title="Player's handbook">PH</span></a>
+                        </div>
+                        <div class="col tile"><a href="/class/105-wizard/" class="tile-wrapper class class_wizard"><span
+                                class="article_title">Волшебник</span><span class="article_title_en">Wizard</span><span
+                                class="article_source" title="Player's handbook">PH</span></a></div>
+                        <div class="col tile"><a href="/class/90-druid/" class="tile-wrapper class class_druid"><span
+                                class="article_title">Друид</span><span class="article_title_en">Druid</span><span
+                                class="article_source" title="Player's handbook">PH</span></a></div>
+                        <div class="col tile"><a href="/class/89-cleric/" class="tile-wrapper class class_cleric"><span
+                                class="article_title">Жрец</span><span class="article_title_en">Cleric</span><span
+                                class="article_source" title="Player's handbook">PH</span></a></div>
+                        <div class="col tile"><a href="/class/137-artificer/"
+                                                 class="tile-wrapper class class_artificer"><span class="article_title">Изобретатель</span><span
+                                class="article_title_en">Artificer</span><span class="article_source"
+                                                                               title="Tasha's Cauldron of Everything">TCE</span></a>
+                        </div>
+                        <div class="col tile"><a href="/class/104-warlock/"
+                                                 class="tile-wrapper class class_warlock"><span class="article_title">Колдун</span><span
+                                class="article_title_en">Warlock</span><span class="article_source"
+                                                                             title="Player's handbook">PH</span></a>
+                        </div>
+                        <div class="col tile"><a href="/class/93-monk/" class="tile-wrapper class class_monk"><span
+                                class="article_title">Монах</span><span class="article_title_en">Monk</span><span
+                                class="article_source" title="Player's handbook">PH</span></a></div>
+                        <div class="col tile"><a href="/class/94-paladin/"
+                                                 class="tile-wrapper class class_paladin"><span class="article_title">Паладин</span><span
+                                class="article_title_en">Paladin</span><span class="article_source"
+                                                                             title="Player's handbook">PH</span></a>
+                        </div>
+                        <div class="col tile"><a href="/class/99-rogue/" class="tile-wrapper class class_rogue"><span
+                                class="article_title">Плут</span><span class="article_title_en">Rogue</span><span
+                                class="article_source" title="Player's handbook">PH</span></a></div>
+                        <div class="col tile"><a href="/class/97-ranger/" class="tile-wrapper class class_ranger"><span
+                                class="article_title">Следопыт</span><span class="article_title_en">Ranger</span><span
+                                class="article_source" title="Player's handbook">PH</span></a></div>
+                        <div class="col tile"><a href="/class/101-sorcerer/"
+                                                 class="tile-wrapper class class_sorcerer"><span class="article_title">Чародей</span><span
+                                class="article_title_en">Sorcerer</span><span class="article_source"
+                                                                              title="Player's handbook">PH</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles-tiles"><h2 class="section-title section-title-tiles">Напарники</h2>
+                    <div class="grid-5_lg-4_sm-3_xs-1 tiles tiles-of">
+                        <div class="col tile"><a href="/class/199-warrior_sidekick/"
+                                                 class="tile-wrapper class class_warrior_sidekick"><span
+                                class="article_title">Боец</span><span
+                                class="article_title_en">Warrior Sidekick</span><span class="article_source"
+                                                                                      title="Tasha's Cauldron of Everything">TCE</span></a>
+                        </div>
+                        <div class="col tile"><a href="/class/198-spellcaster_sidekick/"
+                                                 class="tile-wrapper class class_spellcaster_sidekick"><span
+                                class="article_title">Заклинатель</span><span class="article_title_en">Spellcaster Sidekick</span><span
+                                class="article_source" title="Tasha's Cauldron of Everything">TCE</span></a></div>
+                        <div class="col tile"><a href="/class/197-expert_sidekick/"
+                                                 class="tile-wrapper class class_expert_sidekick"><span
+                                class="article_title">Эксперт </span><span
+                                class="article_title_en">Expert Sidekick</span><span class="article_source"
+                                                                                     title="Tasha's Cauldron of Everything">TCE</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles-tiles"><h2 class="section-title section-title-tiles">Классы Homebrew</h2>
+                    <div class="grid-5_lg-4_sm-3_xs-1 tiles tiles-of">
+                        <div class="col tile"><a href="/homebrew/class/395-alchemist/"
+                                                 class="tile-wrapper class class_alchemist"><span class="article_title">Алхимик</span><span
+                                class="article_title_en">Alchemist</span><span class="article_source" title="Homebrew">HB</span></a>
+                        </div>
+                        <div class="col tile"><a href="/homebrew/class/382-alternate_fighter/"
+                                                 class="tile-wrapper class class_alternate_fighter"><span
+                                class="article_title">Альтернативный воин</span><span class="article_title_en">Alternate Fighter</span><span
+                                class="article_source" title="Homebrew, Laserllama">HB, HB:LL</span></a></div>
+                        <div class="col tile"><a href="/homebrew/class/391-alternate_monk/"
+                                                 class="tile-wrapper class class_alternate_monk"><span
+                                class="article_title">Альтернативный монах</span><span class="article_title_en">Alternate Monk</span><span
+                                class="article_source" title="Homebrew, Laserllama">HB, HB:LL</span></a></div>
+                        <div class="col tile"><a href="/homebrew/class/195-blood_hunter/"
+                                                 class="tile-wrapper class class_blood_hunter"><span
+                                class="article_title">Кровавый охотник</span><span
+                                class="article_title_en">Blood hunter</span><span class="article_source"
+                                                                                  title="Homebrew, Matt Mercer / Critical Role">HB, HB:CR</span></a>
+                        </div>
+                        <div class="col tile"><a href="/homebrew/class/277-magus/"
+                                                 class="tile-wrapper class class_magus"><span class="article_title">Магус</span><span
+                                class="article_title_en">Magus</span><span class="article_source"
+                                                                           title="Homebrew, Laserllama">HB, HB:LL</span></a>
+                        </div>
+                        <div class="col tile"><a href="/homebrew/class/208-mystic/"
+                                                 class="tile-wrapper class class_mystic"><span class="article_title">Мистик</span><span
+                                class="article_title_en">Mystic</span><span class="article_source"
+                                                                            title="Unearthed Arcana, Homebrew">UA, HB</span></a>
+                        </div>
+                        <div class="col tile"><a href="/homebrew/class/202-the_lingering_soul/"
+                                                 class="tile-wrapper class class_the_lingering_soul"><span
+                                class="article_title">Неупокоенная душа</span><span class="article_title_en">The lingering soul</span><span
+                                class="article_source"
+                                title="Homebrew, Matt Mercer / Critical Role">HB, HB:CR</span></a></div>
+                        <div class="col tile"><a href="/homebrew/class/401-savant/"
+                                                 class="tile-wrapper class class_savant"><span class="article_title">Савант</span><span
+                                class="article_title_en">Savant</span><span class="article_source"
+                                                                            title="Homebrew, Laserllama">HB, HB:LL</span></a>
+                        </div>
+                        <div class="col tile"><a href="/homebrew/class/419-runekeeper/"
+                                                 class="tile-wrapper class class_runekeeper"><span
+                                class="article_title">Хранитель рун</span><span
+                                class="article_title_en">Runekeeper</span><span class="article_source" title="Homebrew">HB</span></a>
+                        </div>
+                        <div class="col tile"><a href="/homebrew/class/389-shaman/"
+                                                 class="tile-wrapper class class_shaman"><span class="article_title">Шаман</span><span
+                                class="article_title_en">Shaman</span><span class="article_source"
+                                                                            title="Homebrew, Laserllama">HB, HB:LL</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+    </div>
+</div>
+{% endblock %}

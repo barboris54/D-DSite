@@ -1,0 +1,109 @@
+.navbar{
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+.navbar .container{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-menu{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+.navbar-menu li {
+    display: inline;
+    margin-left: 30px;
+
+}
+.navbar-menu li a {
+    display: inline-block;
+    color: #000;
+    opacity: 0.7;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: coral;
+    border-radius: 100px;
+
+}
+.navbar-wrap{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.navbar-brand{
+    position: absolute;
+    left: 50px;
+    font-weight: 700;
+    font-size: 26px;
+    text-decoration: none;
+    color: black
+}
+.navbar-menu li a:hover{
+    opacity: 1;
+    transform: scale(1.04);
+    transition: .1s ease-in-out;
+    box-shadow: 0 4px 6px rgba(255, 127,80 ,.2);
+}
+.tile-wrapper{
+    background-color: #e9dfd2;
+    transition: all .15s;
+    height: 90px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    text-decoration: none;
+    color: #141414;
+    padding: 8px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+[class*=grid-], [class*=grid_], [class~=grid] {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -4px;
+}
+[class*=grid-5]>[class*=col-], [class*=grid-5]>[class*=col_], [class*=grid-5]>[class~=col]{
+    flex-basis: 20%;
+    max-width: 20%
+}
+[class*=col_], [class~=col] {
+    flex: 1 1 0%;
+}
+[class*=col-], [class*=col_], [class~=col] {
+    box-sizing: border-box;
+    padding: 0 4px 8px;
+    max-width: 100%;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #141414;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    min-height: 100vh;
+    position: relative;
+}
