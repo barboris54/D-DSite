@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #302c2c;
 }
 .navbar-menu{
     list-style-type: none;
@@ -21,7 +22,7 @@
 }
 .navbar-menu li a {
     display: inline-block;
-    color: #000;
+    color: #302c2c;
     opacity: 0.7;
     text-decoration: none;
     padding: 10px 20px;
@@ -42,7 +43,7 @@
     font-weight: 700;
     font-size: 26px;
     text-decoration: none;
-    color: black
+    color: coral
 }
 .navbar-menu li a:hover{
     opacity: 1;
@@ -58,7 +59,6 @@
     overflow: hidden;
     border-radius: 2px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     text-align: left;
     text-decoration: none;
@@ -71,6 +71,14 @@
     user-select: none;
     cursor: pointer;
 }
+.tile-wrapper p {
+    margin: 0;
+}
+.tile-wrapper img {
+    padding-bottom: 10px;
+    padding-top: 0;
+}
+
 [class*=grid-], [class*=grid_], [class~=grid] {
     box-sizing: border-box;
     display: flex;
@@ -106,4 +114,5 @@ body {
     align-items: stretch;
     min-height: 100vh;
     position: relative;
+    background-color: #141414;
 }
