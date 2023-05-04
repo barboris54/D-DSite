@@ -100,6 +100,59 @@
 *, :after, :before {
     box-sizing: inherit;
 }
+
+h2 {
+    color: coral;
+}
+b {
+font-size: 1.2em;
+}
+h1 a {
+    color: coral;
+    text-decoration: none;
+}
+.article_source{
+    padding-top: 10px;
+}
+abbr, address, article, aside, audio, b, blockquote, body, body div, caption, cite, code, dd, del, details, dfn, dl, dt,
+em, fieldset, figure, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav,
+ object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time,
+ tr, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+}
+.new-article blockquote, .trumbowyg-editor blockquote {
+    display: block;
+    text-align: right;
+    font-family: Neucha,cursive;
+    font-size: 18px;
+    margin: 24px 0;
+    padding-left: 10%;
+}
+.card-body p {
+    padding: 0;
+    margin: 0 0 8px;
+}
+
+.card {
+    position: relative;
+}
+.card {
+    padding: 0;
+    margin: 0 0 8px;
+    z-index: 2;
+}
+.paper-1 {
+    padding: 8px;
+    border-radius: 2px;
+}
+.card-type, .paper-1 {
+    background-color: #e9dfd2;;
+}
 body {
     font-family: "Open Sans",sans-serif;
     font-size: 15px;
