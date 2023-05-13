@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class HeroesClass(models.Model):
     rus_name = models.CharField(max_length=200)
     eng_name = models.CharField(max_length=200)
@@ -32,9 +33,14 @@ class HeroesClass(models.Model):
     class_ability_equipment2 = models.CharField(null=True, blank=True, default="default title", max_length=200)
     class_ability_equipment3 = models.CharField(null=True, blank=True, default="default title", max_length=200)
     # законичл классовые умения
+    spell_using = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    spell_using_decs = models.TextField(null=True, blank=True, default="default title")
+    extra_spell = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    extra_spell_table = models.TextField(null=True, blank=True, default="default title")
 
     def __str__(self):
         return self.rus_name
+
 
 class Companions(models.Model):
     rus_name = models.CharField(max_length=200)
@@ -45,6 +51,7 @@ class Companions(models.Model):
     def __str__(self):
         return self.rus_name
 
+
 class ClassHomebrew(models.Model):
     rus_name = models.CharField(max_length=200)
     eng_name = models.CharField(max_length=200)
@@ -52,5 +59,13 @@ class ClassHomebrew(models.Model):
     adons_name2 = models.CharField(max_length=200, blank=True)
     adons_name3 = models.CharField(max_length=200, blank=True)
     bg_image = models.ImageField(upload_to='dnd_wiki/icons', default='', blank=True)
+
+
+class BardSpells(models.Model):
+    hero_class = models.ForeignKey(HeroesClass, on_delete=models.PROTECT)
+    hero_class_str = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    title = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    description_spell = models.TextField(null=True, blank=True, default="default title")
+    lvl = models.CharField(null=True, blank=True, default="default title", max_length=200)
 
 
