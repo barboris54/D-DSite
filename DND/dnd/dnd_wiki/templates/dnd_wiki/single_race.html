@@ -1,0 +1,88 @@
+{% extends 'dnd_wiki/base.html' %}
+{% block content %}
+
+<div class="paper-1 card" style="background-position:40% 0" itemscope="" itemtype="#">
+    <div class="card-wrapper race_dwarf" style="background-image:url(/img/card-bg/race_dwarf.png);">
+        <div class="card-header"><h2 class="card-title" itemprop="name"><a href="/articles/78-dwarf/" itemprop="url"
+                                                                           class="item-link">{{ro.rus_name}}</a></h2>
+            <div class="card-menu"><span class="card-menu__button"><span></span><span></span><span></span></span>
+
+            </div>
+        </div>
+        <div class="card-body new-article" itemprop="articleBody">
+            <ul class="params">
+                <li><strong>Источник:</strong> «<span>Player's handbook</span>»</li>
+            </ul>
+            <div class="desc" itemprop="articleBody">
+                <blockquote>{{ro.description}}</blockquote>
+                <br>
+                <p>{{ro.short_description}}</p>
+                <p>{{ro.rus_name}}</p>
+
+
+                <p></p>
+                <ul class="new-article-menu grid">
+                    <li class="new-article-menu__l1 col-6_lg-8_md-12_xs-24">
+                        <div class="new-article-menu__l1-wrapper"><a href="#imena_dvarfov"
+                                                                     class="btn btn-contrast btn-sm btn-primary scroll-link new-article-menu__l1-link">Имена
+                            для Расы
+                        </a></div>
+                    </li>
+                    <li class="new-article-menu__l1 col-6_lg-8_md-12_xs-24">
+                        <div class="new-article-menu__l1-wrapper"><a href="#osobennosti_dvarfov"
+                                                                     class="btn btn-contrast btn-sm btn-primary scroll-link new-article-menu__l1-link">Особенности
+                            Расы</a></div>
+                    </li>
+
+
+                </ul>
+                <p></p>
+                {% for race in rq %}
+                <p></p>
+                {% if ro.rus_name == race.race %}
+                <h3 class="underlined">{{race.title|linebreaks}}</h3>
+                <p>{{race.description}}</p>
+                <br>
+
+                {% endif %}
+                {% endfor %}
+                <br>
+                <h3 class="underlined"><span id="imena_dvarfov">Имена Расы</span></h3>
+                {% if not ro.female_names  %}
+                <p>Поскольку культура людей самая разнообразная среди всех существующих рас, у них нет типичных имён.
+                    Некоторые родители дают своим детям имена из других наречий, например, из Дварфского или Эльфийского
+                    (произносимые более или менее правильно), но большинство родителей даёт имена, связанные с культурой
+                    своего региона или традициями предков. Культура быта и физические характеристики людей могут сильно
+                    меняться в зависимости от региона. В Забытых Королевствах, например, одежда, архитектура, кухня,
+                    музыка, и литература в северо-западных землях Серебряных Пустошей отличаются от тех, что есть в
+                    далёком Тёрмише или Импилтуре на востоке, и совсем не похожи на их аналоги в далёком Кара-Туре.
+                    Физические характеристики людей различаются в соответствии с переселениями их предков, поэтому люди
+                    Серебряных Пустошей имеют все возможные сочетания цветов кожи. В Забытых Королевствах широко
+                    известны девять этнических групп, хотя более дюжины других находятся в более локализованных областях
+                    Фаэруна. Эти группы и типичные имена их представителей могут быть использованы в качестве примера,
+                    вне зависимости от того, из какого мира ваш человек.</p>
+
+                {% else %}
+                <p><strong>Мужские имена:</strong>{{ro.male_names}}</p>
+                <p><strong>Женские имена:</strong>{{ro.female_names}}</p>
+                {% endif %}
+
+                <br>
+                <h3 class="underlined"><span id="osobennosti_dvarfov">Особенности Расы</span></h3>
+
+
+                <div class="multiforo-folder">
+                    <div class="multiforo" caption="Горный" data-index="1">
+                        <p>{{ro.race_qualites|linebreaks}}</p>
+
+
+                    </div>
+
+
+                </div>
+                <ul class="params"></ul>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+    {% endblock %}

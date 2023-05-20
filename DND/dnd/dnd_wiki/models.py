@@ -59,6 +59,21 @@ class ClassHomebrew(models.Model):
     adons_name2 = models.CharField(max_length=200, blank=True)
     adons_name3 = models.CharField(max_length=200, blank=True)
     bg_image = models.ImageField(upload_to='dnd_wiki/icons', default='', blank=True)
+    def __str__(self):
+        return self.rus_name
+
+class Races(models.Model):
+    rus_name = models.CharField(max_length=200)
+    eng_name = models.CharField(max_length=200)
+    adons_name = models.CharField(max_length=200)
+    bg_image = models.ImageField(upload_to='dnd_wiki/icons', default='', blank=True)
+    description = models.TextField(blank=True, null=True)
+    short_description = models.TextField(blank=True, null=True)
+    male_names = models.TextField(blank=True, null=True)
+    female_names = models.TextField(blank=True, null=True)
+    race_qualites = models.TextField(blank=True, null=True)
+    def __str__(self):
+        return self.rus_name
 
 
 class BardSpells(models.Model):
@@ -67,5 +82,16 @@ class BardSpells(models.Model):
     title = models.CharField(null=True, blank=True, default="default title", max_length=200)
     description_spell = models.TextField(null=True, blank=True, default="default title")
     lvl = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    def __str__(self):
+        return self.hero_class_str
+
+
+class RaceQualities(models.Model):
+    race = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    title = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    description = models.TextField(null=True, blank=True, default="default title")
+    def __str__(self):
+        return self.race
+
 
 
