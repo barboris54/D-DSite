@@ -93,5 +93,11 @@ class RaceQualities(models.Model):
     def __str__(self):
         return self.race
 
-
+class Spell(models.Model):
+    name = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    lvl = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    companent = models.CharField(null=True, blank=True, default="default title", max_length=200)
+    description = models.TextField(null=True, blank=True, default="default title")
+    def __str__(self):
+        return self.name
 

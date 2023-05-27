@@ -1,0 +1,25 @@
+{% extends 'dnd_wiki/base.html' %}
+{% block content %}
+<div class="cards-wrapper">
+    <div class="paper-1 card active">
+        <div class="coner-"></div>
+        <div class="card-wrapper">
+            <div class="card-header"><h2 class="card-title">{{so.name}}</span></h2>
+                <div class="card-menu"><span class="card-menu__button"><span></span><span></span><span></span></span>
+                    <ul class="card-menu__list">
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body new-article" itemprop="articleBody">
+                <ul class="params">
+                    <li class="size-type-alignment">{{so.lvl}} уровень </li>
+                    <p>{{so.description|linebreaks}}</p>
+                </ul>
+            </div>
+            <div class="card-footer"></div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

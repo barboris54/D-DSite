@@ -1,0 +1,22 @@
+{% extends 'dnd_wiki/base.html' %}
+{% block content %}
+
+<ul class="cards-list" id="list" data-font-size="15">
+    <li class="cards_list__block-wrapper">
+        <div class="cards_list__block-label"></div>
+        <ul class="cards_list__block">
+            {% for spell in spells %}
+            <li class="cards_list__item">
+
+                <a class="cards_list__item-wrapper" href="{% url 'single_spell' spell.id%}">
+                    <span class="cards_list__item-prefix" title="1 уровень">[<span>{{spell.lvl}}</span>]</span>
+                    <span class="cards_list__item-name">{{spell.name}}</span>
+                    <span class="cards_list__item-suffix">{{spell.companent}}</span>
+                </a>
+            </li>
+                {% endfor %}
+        </ul>
+    </li>
+
+</ul>
+{% endblock %}

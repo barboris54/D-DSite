@@ -151,7 +151,7 @@ em, fieldset, figure, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, k
     border-radius: 2px;
 }
 .card-type, .paper-1 {
-    background-color: #e9dfd2;;
+    background-color: #e9dfd2;
 }
 body {
     font-family: "Open Sans",sans-serif;
@@ -258,5 +258,65 @@ body {
     }
 .articles-tiles{
     margin-top: 10px;
+    margin-left: 10px;
+}
+.cards-list{
+    background-color: #e9dfd2
+}
+.cards_list__block-wrapper:not(:last-child) {
+    margin-bottom: 12px;
+}
+.cards_list__block-wrapper {
+    position: relative;
+}
+
+.cards-list[data-font-size="15"] .cards_list__item, .cards-list[data-font-size="15"] .cards_list__item-prefix, .cards-list[data-font-size="15"] .cards_list__item-suffix {
+    font-size: 15px;
+}
+.cards_list__item {
+    -moz-column-break-inside: avoid;
+    break-inside: avoid-column;
+    display: block;
+}
+
+.cards_list__block {
+    -moz-columns: 3;
+    columns: 3;
+}
+.cards_list__block {
+    -moz-column-count: 4;
+    column-count: 4;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    transition: background-color .15s;
+    margin-left: 16px;
+    margin-top: 15px;
+}
+.cards_list__item-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 2px 4px;
+    position: relative;
+}
+a {
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+a, button, input, select, textarea {
+    margin: 0;
+}
+.cards_list__item {
+    border-bottom: 1px solid rgb(61, 57, 57);
+    margin-bottom: 10px;
+}
+.cards_list__item a{
+    color: #302c2c;
+}
+.cards_list__item-suffix{
+    position: absolute;
+    right: 10px;
+}
+.cards_list__item-name{
     margin-left: 10px;
 }

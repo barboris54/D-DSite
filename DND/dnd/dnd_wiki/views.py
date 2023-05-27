@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import HeroesClass, Companions, ClassHomebrew, BardSpells, Races,RaceQualities
+from .models import HeroesClass, Companions, ClassHomebrew, BardSpells, Races,RaceQualities,Spell
 
 def main_page(request):
     pr = HeroesClass.objects.all()
@@ -24,3 +24,14 @@ def single_race(request, pk):
     race_qualities = RaceQualities.objects.all()
     context = {'ro': race_obj, 'rq': race_qualities}
     return render(request, 'dnd_wiki/single_race.html', context)
+
+def spells(request):
+    sp = Spell.objects.all()
+    context = {'spells': sp}
+    return render(request,'dnd_wiki/spells.html', context)
+
+def single_spell(request, pk):
+    spell_obj = Spell.objects.get(id=pk)
+    spells = Spell.objects.all()
+    context = {'so': spell_obj, 'spells': spells}
+    return render(request, 'dnd_wiki/spell_description.html', context)
