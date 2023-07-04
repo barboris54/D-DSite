@@ -320,3 +320,24 @@ a, button, input, select, textarea {
 .cards_list__item-name{
     margin-left: 10px;
 }
+.search-box{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    background: #302c2c;
+    padding: 10px;
+}
+.search-btn{
+    color: #302c2c;
+    width: 40px;
+    height: 40xp;
+    border-radius: 40px;
+    background: coral;
+    padding: 5px;
+}
+.search-txt{
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}

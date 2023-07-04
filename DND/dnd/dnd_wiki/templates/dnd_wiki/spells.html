@@ -1,9 +1,15 @@
 {% extends 'dnd_wiki/base.html' %}
 {% block content %}
-
+<form action="{% url 'spells' %}" method="get">
+    <div class="search-box">
+            <input class="search-txt" type="text" name="search_query" placeholder="Поиск...">
+            <input class="search-btn" type="submit" value="Поиск"></input>
+    </div>
+</form>
 <ul class="cards-list" id="list" data-font-size="15">
     <li class="cards_list__block-wrapper">
         <div class="cards_list__block-label"></div>
+
         <ul class="cards_list__block">
             {% for spell in spells %}
             <li class="cards_list__item">
@@ -19,4 +25,5 @@
     </li>
 
 </ul>
+
 {% endblock %}

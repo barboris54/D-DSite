@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from .models import HeroesClass, Companions, ClassHomebrew, BardSpells, Races,RaceQualities,Spell
+from .models import HeroesClass, BardSpells, Races,RaceQualities,Spell
+from django.db.models import Q
 
 def main_page(request):
     pr = HeroesClass.objects.all()
-    comp = Companions.objects.all()
-    hb = ClassHomebrew.objects.all()
-    context = {'heroes': pr, 'companions':comp, 'hb_heroes': hb}
+    context = {'heroes': pr}
     return render(request, 'dnd_wiki/main_page.html', context)
 
 def single_class(request, pk):
@@ -26,8 +25,13 @@ def single_race(request, pk):
     return render(request, 'dnd_wiki/single_race.html', context)
 
 def spells(request):
-    sp = Spell.objects.all()
-    context = {'spells': sp}
+    search_query=''
+
+    if request.GET.get('search_query'):
+        search_query = request.GET.get('search_query')
+
+    sp = Spell.objects.filter(Q(name__icontains=search_query) | Q(lvl__icontains=search_query))
+    context = {'spells': sp, 'search_query': search_query}
     return render(request,'dnd_wiki/spells.html', context)
 
 def single_spell(request, pk):
